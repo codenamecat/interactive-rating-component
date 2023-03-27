@@ -52,6 +52,13 @@ $colors: (
         margin: 20px 0;
 
         input {
+            // display: none;
+            appearance: none;
+            margin: 0;
+            padding: 0;
+            
+        }
+        label {
             background-color: color(seethrough-white);
             color: color(light-grey);
             border: none;
@@ -59,6 +66,10 @@ $colors: (
             font-weight: 700;
             padding: 10px 15px;
             border-radius: 30px;
+
+            &:checked {
+                background-color: red;
+            }
         }
     }
 

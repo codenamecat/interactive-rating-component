@@ -39,6 +39,13 @@ body {
   margin: 20px 0;
 }
 .rating-container input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  padding: 0;
+}
+.rating-container label {
   background-color: rgba(255, 255, 255, 0.0666666667);
   color: #959eac;
   border: none;
@@ -46,6 +53,9 @@ body {
   font-weight: 700;
   padding: 10px 15px;
   border-radius: 30px;
+}
+.rating-container label:checked {
+  background-color: red;
 }
 
 #submit-btn {
