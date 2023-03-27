@@ -1,1 +1,104 @@
-// font-family: 'Overpass', sans-serif;
+$colors: (
+    plain-white: #ffffff,
+    light-grey: #959eac,
+    medium-grey: #7c8798,
+    dark-blue: #252d37,
+    very-dark-blue: #121417,
+    accent-orange: #fb7413,
+    seethrough-white: #ffffff11
+    );
+
+    @function color($color-name) {
+        @return map-get($colors, $color-name)
+    }
+
+    html {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        background-color: color(very-dark-blue);
+        color: color(plain-white);
+        font-family: 'Overpass', sans-serif;
+    }
+
+    #rating-card {
+        background-color: color(dark-blue);
+        border-radius: 16px;
+        padding: 20px;
+        max-width: 400px;
+    }
+
+    .star-container {
+        background-color: color(seethrough-white);
+        display: flex;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 24px;
+    }
+
+    .intro-text {
+        color: color(light-grey);
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .rating-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+
+        input {
+            background-color: color(seethrough-white);
+            color: color(light-grey);
+            border: none;
+            font-family: 'Overpass', sans-serif;
+            font-weight: 700;
+            padding: 10px 15px;
+            border-radius: 30px;
+        }
+    }
+
+    #submit-btn {
+        background-color: color(accent-orange);
+        text-transform: uppercase;
+        color: color(plain-white);
+        font-family: 'Overpass', sans-serif;
+        border: none;
+        border-radius: 20px;
+        width: 100%;
+        padding: 12px 0 10px 0;
+        letter-spacing: 2px;
+    }
+
+    #thank-you-card {
+        background-color: color(dark-blue);
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: center;
+        max-width: 400px;
+        margin-top: 20px; //remove later
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    #rating-selection {
+        background-color: color(seethrough-white);
+        color: color(accent-orange);
+        display: inline-block;
+        padding: 10px 16px 8px 16px;
+        border-radius: 20px;
+        margin-bottom: 0;
+    }
+
+    .thank-you-text {
+        color: color(light-grey);
+        font-size: 15px;
+        line-height: 22px;
+    }

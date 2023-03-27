@@ -1,1 +1,89 @@
-/*# sourceMappingURL=styles.css.map */
+html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #121417;
+  color: #ffffff;
+  font-family: "Overpass", sans-serif;
+}
+
+#rating-card {
+  background-color: #252d37;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.star-container {
+  background-color: rgba(255, 255, 255, 0.0666666667);
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 24px;
+}
+
+.intro-text {
+  color: #959eac;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.rating-container input {
+  background-color: rgba(255, 255, 255, 0.0666666667);
+  color: #959eac;
+  border: none;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+
+#submit-btn {
+  background-color: #fb7413;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Overpass", sans-serif;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  padding: 12px 0 10px 0;
+  letter-spacing: 2px;
+}
+
+#thank-you-card {
+  background-color: #252d37;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 400px;
+  margin-top: 20px;
+}
+#thank-you-card img {
+  display: block;
+  margin: 0 auto;
+}
+
+#rating-selection {
+  background-color: rgba(255, 255, 255, 0.0666666667);
+  color: #fb7413;
+  display: inline-block;
+  padding: 10px 16px 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 0;
+}
+
+.thank-you-text {
+  color: #959eac;
+  font-size: 15px;
+  line-height: 22px;
+}/*# sourceMappingURL=styles.css.map */
