@@ -12,6 +12,14 @@ $colors: (
         @return map-get($colors, $color-name)
     }
 
+    $desktop: 800px; // desktop view not really needed but will leave this in anyway
+
+    @mixin desktop {
+        @media (min-width: #{$desktop}) {
+            @content;
+        }
+    }
+
     html {
         height: 100%;
         display: flex;
@@ -29,7 +37,7 @@ $colors: (
         background-color: color(dark-blue);
         border-radius: 16px;
         padding: 20px;
-        max-width: 400px;
+        max-width: 350px;
     }
 
     .star-container {
@@ -40,7 +48,7 @@ $colors: (
         border-radius: 24px;
     }
 
-    .intro-text {
+    .intro-text, .thank-you-text {
         color: color(light-grey);
         font-size: 15px;
         line-height: 22px;
@@ -53,9 +61,6 @@ $colors: (
 
         input {
             display: none;
-            // appearance: none;
-            // margin: 0;
-            // padding: 0;
 
             &:hover+label {
                 background-color: color(light-grey);
@@ -67,8 +72,8 @@ $colors: (
                 background-color: color(accent-orange);
                 color: color(plain-white);
             }
-            
         }
+
         label {
             background-color: color(seethrough-white);
             color: color(light-grey);
@@ -103,7 +108,7 @@ $colors: (
         border-radius: 16px;
         padding: 30px 20px;
         text-align: center;
-        max-width: 400px;
+        max-width: 350px;
         display: none;
 
         img {
@@ -119,10 +124,4 @@ $colors: (
         padding: 10px 16px 8px 16px;
         border-radius: 20px;
         margin-bottom: 0;
-    }
-
-    .thank-you-text {
-        color: color(light-grey);
-        font-size: 15px;
-        line-height: 22px;
     }

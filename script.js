@@ -1,11 +1,4 @@
-// variables for elements (sections, each rating button value; not the buttons themselves, submit button)
-
-// function triggered by onclick submit
-  // change one section to display while the other is hidden
-
-// function for when rating button is clicked
-  // when rating button is clicked, replace text element on 2nd card with value of button
-
+// an attempt was made to use mvc architecture, hoping it's at least close
 
 // model
 
@@ -13,27 +6,48 @@ const submitBtn = document.getElementById('submit-btn');
 const ratingCard = document.getElementById('rating-card');
 const thankYouCard = document.getElementById('thank-you-card');
 const ratingSelection = document.getElementById('rating-selection');
+const ratingOptions = document.getElementsByName('rating');
+const errorMessage = document.getElementById('error-message')
 
 let selectedOption;
 
 
 // view
 
-submitBtn.addEventListener('click', function() {
+function displaySelection() {
+    ratingSelection.textContent = 'You selected ' + selectedOption + ' out of 5';
+}
+
+function switchCards() {
     ratingCard.style = 'display: none';
     thankYouCard.style = 'display: block';
-
-    displaySelectedOption();
-})
+}
 
 // controller?
 
-function displaySelectedOption() {
-    const ratingOptions = document.getElementsByName('rating');
-    
+submitBtn.addEventListener('click', function () {
+
+    let isRatingChosen = false;
+
     for (let i = 0; i < ratingOptions.length; i++) {
         if (ratingOptions[i].checked) {
-            ratingSelection.textContent = 'You selected ' + ratingOptions[i].value + ' out of 5';
+            isRatingChosen = true;
+        }
+    }
+
+    if (isRatingChosen === true) {
+        switchCards();
+        findSelectedOption();
+    } else {
+        errorMessage.textContent = 'Please choose a rating first!'
+    }
+})
+
+function findSelectedOption() {
+    for (let i = 0; i < ratingOptions.length; i++) {
+        if (ratingOptions[i].checked) {
+            selectedOption = ratingOptions[i].value;
+            displaySelection();
         }
     }
 }
