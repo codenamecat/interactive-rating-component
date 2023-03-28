@@ -52,10 +52,21 @@ $colors: (
         margin: 20px 0;
 
         input {
-            // display: none;
-            appearance: none;
-            margin: 0;
-            padding: 0;
+            display: none;
+            // appearance: none;
+            // margin: 0;
+            // padding: 0;
+
+            &:hover+label {
+                background-color: color(light-grey);
+                color: color(plain-white);
+                cursor: pointer;
+            }
+            
+            &:checked+label {
+                background-color: color(accent-orange);
+                color: color(plain-white);
+            }
             
         }
         label {
@@ -66,10 +77,6 @@ $colors: (
             font-weight: 700;
             padding: 10px 15px;
             border-radius: 30px;
-
-            &:checked {
-                background-color: red;
-            }
         }
     }
 
@@ -83,6 +90,12 @@ $colors: (
         width: 100%;
         padding: 12px 0 10px 0;
         letter-spacing: 2px;
+
+        &:hover {
+            background-color: color(plain-white);
+            color: color(accent-orange);
+            cursor: pointer;
+        }
     }
 
     #thank-you-card {
@@ -91,7 +104,7 @@ $colors: (
         padding: 30px 20px;
         text-align: center;
         max-width: 400px;
-        margin-top: 20px; //remove later
+        display: none;
 
         img {
             display: block;

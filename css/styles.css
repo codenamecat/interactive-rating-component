@@ -39,11 +39,16 @@ body {
   margin: 20px 0;
 }
 .rating-container input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  margin: 0;
-  padding: 0;
+  display: none;
+}
+.rating-container input:hover + label {
+  background-color: #959eac;
+  color: #ffffff;
+  cursor: pointer;
+}
+.rating-container input:checked + label {
+  background-color: #fb7413;
+  color: #ffffff;
 }
 .rating-container label {
   background-color: rgba(255, 255, 255, 0.0666666667);
@@ -53,9 +58,6 @@ body {
   font-weight: 700;
   padding: 10px 15px;
   border-radius: 30px;
-}
-.rating-container label:checked {
-  background-color: red;
 }
 
 #submit-btn {
@@ -69,6 +71,11 @@ body {
   padding: 12px 0 10px 0;
   letter-spacing: 2px;
 }
+#submit-btn:hover {
+  background-color: #ffffff;
+  color: #fb7413;
+  cursor: pointer;
+}
 
 #thank-you-card {
   background-color: #252d37;
@@ -76,7 +83,7 @@ body {
   padding: 30px 20px;
   text-align: center;
   max-width: 400px;
-  margin-top: 20px;
+  display: none;
 }
 #thank-you-card img {
   display: block;
